@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="showListCell" id="KGk-i7-Jjw" customClass="ShowListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品名称:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diP-u8-T30">
+                        <rect key="frame" x="15" y="8" width="61.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品描述:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJ7-wj-EcY">
+                        <rect key="frame" x="15" y="35" width="53" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="丢失位置:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-VD-GRC">
+                        <rect key="frame" x="15" y="59.5" width="53" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="丢失时间:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWa-OW-Kgb">
+                        <rect key="frame" x="259" y="9.5" width="53" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WJ7-wj-EcY" firstAttribute="top" secondItem="diP-u8-T30" secondAttribute="bottom" constant="10" id="4qW-67-g1H"/>
+                    <constraint firstItem="SWa-OW-Kgb" firstAttribute="centerY" secondItem="diP-u8-T30" secondAttribute="centerY" id="bMA-Sc-9mf"/>
+                    <constraint firstItem="diP-u8-T30" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="sLF-nq-s5W"/>
+                    <constraint firstItem="WJ7-wj-EcY" firstAttribute="leading" secondItem="diP-u8-T30" secondAttribute="leading" id="sno-ce-TcF"/>
+                    <constraint firstItem="IcJ-VD-GRC" firstAttribute="top" secondItem="WJ7-wj-EcY" secondAttribute="bottom" constant="10" id="uSG-Ua-Uxb"/>
+                    <constraint firstItem="IcJ-VD-GRC" firstAttribute="leading" secondItem="diP-u8-T30" secondAttribute="leading" id="uhe-24-bgJ"/>
+                    <constraint firstItem="diP-u8-T30" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="wQ2-Ta-Hie"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SWa-OW-Kgb" secondAttribute="trailing" id="zIO-9H-Ry6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="describeLabel" destination="WJ7-wj-EcY" id="WxI-k1-qHG"/>
+                <outlet property="locationLabel" destination="IcJ-VD-GRC" id="dFo-vh-Xqd"/>
+                <outlet property="timeLabel" destination="SWa-OW-Kgb" id="F02-Zg-3A5"/>
+                <outlet property="titleLabel" destination="diP-u8-T30" id="iu0-au-EQW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

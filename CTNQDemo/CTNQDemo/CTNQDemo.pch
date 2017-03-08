@@ -1,0 +1,113 @@
+//
+//  CTNQDemo.pch
+//  CTNQDemo
+//
+//  Created by 高赛 on 2017/3/7.
+//  Copyright © 2017年 高赛. All rights reserved.
+//
+
+#ifndef CTNQDemo_pch
+#define CTNQDemo_pch
+
+#import "UIColor+AN.h"
+#import "UIImage+AN.h"
+#import "UIImageView+AN.h"
+#import "NSString+Expand.h"
+#import "NSDate+Expand.h"
+#import "NSDictionary+Expand.h"
+#import "UIBarButtonItem+AN.h"
+#import "ANCommon.h"
+#import "Common.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "MJExtension.h"
+#import "UIView+Extension.h"
+#import "EventBus.h"
+#import "EventPublisher.h"
+#import "EventSubscriber.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// 1.判断是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+#define iOS10 ([[UIDevice currentDevice].systemVersion doubleValue] >= 10.0)
+// 2.获得RGB颜色
+#define ANColor(r, g, b) [UIColor colorWithRed:(r) / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0]
+/** 颜色 */
+#define ANCOLOR(R, G, B, ALPHA)   [UIColor colorWithRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:ALPHA]
+
+/** 屏幕的宽度 */
+#define WIDTH   [[UIScreen mainScreen] bounds].size.width
+/** 屏幕的高度 */
+#define HIGH    [[UIScreen mainScreen] bounds].size.height
+
+#define LIGHTBLUE ANColor(46, 147, 234)
+#define LIGHTGREY ANColor(140, 140, 140)
+#define BlackBlue_TextColor ANColor(53, 61, 68)
+//#define StatusTableBorder 13
+#define SYSTEM_FOUNT(size) [UIFont systemFontOfSize:size]
+//#define ANPhotoW 0.21980676*WIDTH
+//#define ANPhotoH 0.21980676*WIDTH
+//#define ANPhotoMargin 3
+
+#define TOKEN @"ZTE0ZmNlOWI4OGU0YjY1YWI3M2E3MGEy"
+#define APPID @"1"
+#define kUserDefaultsCookie @"Cookie"
+
+//#define HOSTURL @"http://139.129.220.248:8080/PickedGoodCMS/"      //测试
+#define HOSTURL @"http://192.168.2.20:8080/PickedGoodCMS/"               //域名
+
+
+// 菊花上的文字
+#define netStr @"请稍候";
+
+/**
+ *  默认cell分割线颜色
+ */
+#define DEFALT_LINE_COLOR ANColor(205, 205, 205)
+/**
+ *  默认cell分割线高度
+ */
+#define DEFALT_LINE_HEIGHT 0.5
+
+/**
+ *  大号字体
+ */
+#define SIZE_FONT_BIG [UIFont systemFontOfSize:15]
+/**
+ *  中号字体
+ */
+#define SIZE_FONT_MIDDLE [UIFont systemFontOfSize:14]
+/**
+ *  小号字体
+ */
+#define SIZE_FONT_SMALL [UIFont systemFontOfSize:13]
+
+// 常用的对象
+#define ANNotificationCenter [NSNotificationCenter defaultCenter]
+#define kMobile [[NSUserDefaults standardUserDefaults] objectForKey:@"mobile"]
+#define kID [[NSUserDefaults standardUserDefaults] objectForKey:@"ID"]
+
+// 4.是否为4inch/4.7/5.5inch/
+#define fourInch ([UIScreen mainScreen].bounds.size.height == 568)
+#define fourPointSevenInch ([UIScreen mainScreen].bounds.size.height == 667)
+#define fivePointFiveInch ([UIScreen mainScreen].bounds.size.height == 736)
+#define threePointFive ([UIScreen mainScreen].bounds.size.height == 480)
+
+
+
+
+
+#define ErrorViewColor [UIColor colorWithRed:0.9255 green:0.4353 blue:0.1255 alpha:1.0]
+#define SuccessViewColor [UIColor colorWithRed:0.2667 green:0.8275 blue:0.3137 alpha:1.0]
+
+
+
+#ifdef DEBUG
+#define ANLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define ANLog(format, ...)
+#endif
+
+#endif
+
