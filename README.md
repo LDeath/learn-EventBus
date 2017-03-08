@@ -1,6 +1,6 @@
 # learn-EventBus
 对EventBus的学习
-工程原地址https://github.com/github-xiaogang/EventBus-iOS.git
+原作者地址https://github.com/github-xiaogang/EventBus-iOS.git
 
 同步方式:
 
@@ -18,4 +18,5 @@
 
 相同点:都必须使用EVENT_SUBSCRIBE(self,eventName)订阅事件
 
-不同点:异步的方式,在发布者发布事件后并不会立刻回调处理事件,而是在需要的时候通过EVENT_CHECK(self,eventName)读取事件后回调
+不同点:异步的方式,在发布者发布事件后并不会立刻回调处理事件,而是在需要的时候通过EVENT_CHECK(self,eventName)读取事件后回调;
+      同时,异步的方式,由于不会立刻读取发布者发布的事件,所以事件会有一定的生命周期(life),存储在eventBus(具有一定的容量)上.
