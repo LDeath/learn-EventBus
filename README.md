@@ -23,8 +23,8 @@
 
 注意点:
 
-EVENT_CHECK_ANY与EVENT_CHECK_ALL的区别
-EVENT_CHECK_ANY:当事件名称数组中有任意一个事件发生时,即立刻调用回调方法
+EVENT_CHECK_ANY与EVENT_CHECK_ALL的区别:
+EVENT_CHECK_ANY:当事件名称数组中有任意一个事件发生时,即立刻调用回调方法.
 EVENT_CHECK_ALL:当事件名称数组中所有的事件发生时,才会调用回调方法,所以使用EVENT_CHECK_ALL时,需要将事件名称数组清空
 
 事件线总容量:EventBus.m中 //事件线容量  int const EVENT_COUNT = 20;控制EventBus的事件总容量,超过后所有的事件都无法读取
